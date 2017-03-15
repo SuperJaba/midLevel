@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sda.controller.CompanyCreateControler">
+   <children>
+      <GridPane StackPane.alignment="CENTER_LEFT">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <RadioButton fx:id="streetRButton" mnemonicParsing="false" onAction="#choosePrefixOnAction" text="Street" GridPane.columnIndex="1" GridPane.halignment="LEFT" GridPane.rowIndex="1" />
+            <RadioButton fx:id="avenueRButton" mnemonicParsing="false" onAction="#choosePrefixOnAction" text="Avenue" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+            <RadioButton fx:id="squareRButton" mnemonicParsing="false" onAction="#choosePrefixOnAction" text="Square" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+            <Text nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="Street prefix:  " textAlignment="RIGHT" wrappingWidth="296.189453125" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nazwa firmy:  " textAlignment="RIGHT" wrappingWidth="105.13671875" GridPane.halignment="RIGHT" GridPane.valignment="CENTER" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ulica:  " textAlignment="RIGHT" wrappingWidth="175.13671875" GridPane.halignment="RIGHT" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numer budynku:  " textAlignment="RIGHT" GridPane.halignment="RIGHT" GridPane.rowIndex="3" />
+            <TextField fx:id="companyNameField" GridPane.columnIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Numer lokalu:  " GridPane.halignment="RIGHT" GridPane.rowIndex="4" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Kod pocztowy:  " GridPane.halignment="RIGHT" GridPane.rowIndex="5" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Miasto:  " GridPane.halignment="RIGHT" GridPane.rowIndex="6" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NIP:  " GridPane.halignment="RIGHT" GridPane.rowIndex="7" />
+            <Button fx:id="addButon" mnemonicParsing="false" onAction="#AddCompanyOnAction" prefHeight="39.0" prefWidth="52.0" text="Dodaj" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="streetNameField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="numerBudynku" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="numerLokalu" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="postalCodeField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="cityNameFild" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="NIPField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+         </children>
+      </GridPane>
+   </children>
+</StackPane>

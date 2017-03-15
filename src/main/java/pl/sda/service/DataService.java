@@ -1,11 +1,15 @@
 package pl.sda.service;
 
 import org.apache.commons.io.FileUtils;
+import pl.sda.model.Adress;
+import pl.sda.model.Company;
 import pl.sda.model.User;
 import pl.sda.xml.XMLFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -43,6 +47,15 @@ private File file;
         //pobrac usera z pliku data.dat String xml = FileUtils.readFileToString(file, "UTF-8");
         //przerobic stringXML na Usera
         return user;
+    }
+
+    public List<String> printCompanyInfo(Company company) {
+        List<String> result = new ArrayList<>();
+        result.add(company.getName());
+        result.add(company.getAdress().toString());
+        result.add(company.getNip());
+
+        return result;
     }
 
 }
