@@ -12,7 +12,7 @@ import pl.sda.service.UserService;
  * Created by RENT on 2017-03-14.
  */
 
-public class LoginController {
+public class LoginController extends Controller {
 
     @FXML
     private TextField passwordField;
@@ -31,13 +31,11 @@ public class LoginController {
         User user = new User(loginTextField.getText(), passwordField.getText());
 //            userField.setLogin(loginTextField.getText());
         //linijka powyzej wpisana bezposrednio w konstruktor User userField
-        Alert alert1 = new Alert(Alert.AlertType.INFORMATION, "Zalogowano");
-        Alert alert2 = new Alert(Alert.AlertType.WARNING, "Bledne dane");
         boolean flag = userService.authenticatie(user);
         if (flag == true) {
-            alert1.show();
+            showErrorAlert("Zalogowano");
         } else {
-            alert2.show();
+            showErrorAlert("Bledne dane logowania");
         }
 
 

@@ -8,8 +8,10 @@ import pl.sda.xml.XMLFactory;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 /**
  *
@@ -58,4 +60,33 @@ private File file;
         return result;
     }
 
-}
+    public void printOut(Company company) {
+        List<String> listInfo = printCompanyInfo(company);
+        for (String line : listInfo) {
+            System.out.println(line);
+        }
+    }
+
+    public static Properties loadPropertise() {
+        Properties result = new Properties();
+        InputStream inputStream;
+        inputStream = DataService.class.getClassLoader().getResourceAsStream("data.propertis");
+        try {
+            result.load(inputStream);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (inputStream != null) {
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return result;
+    }
+
+
+
+    }

@@ -6,7 +6,6 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="486.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.sda.controller.CompanyCreateControler">
    <children>
       <GridPane StackPane.alignment="CENTER_LEFT">
@@ -45,6 +44,8 @@
             <TextField fx:id="postalCodeField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <TextField fx:id="cityNameFild" GridPane.columnIndex="1" GridPane.rowIndex="6" />
             <TextField fx:id="NIPField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Button fx:id="makePDFButton" mnemonicParsing="false" onAction="#makePDFOnAction" text="Pdf" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+            <Button fx:id="validateButton" mnemonicParsing="false" onAction="#validateOnAction" text="Validate" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
          </children>
       </GridPane>
    </children>
